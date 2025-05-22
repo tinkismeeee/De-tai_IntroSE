@@ -1,0 +1,139 @@
+﻿body {
+    width: 100%;
+    margin: 0;
+    background-color: rgb(245,245,247);
+}
+.cart{
+    display:flex;
+}
+.product{
+    height:fit-content;
+    width:65%;
+    margin:10px 0 0 5%;
+    background-color:white;
+    border-radius:10px;
+}
+.rol1 {
+    margin: 0 0 0 3%;
+    width: 90%;
+    list-style: none;
+    display: flex;
+    padding: 30px 0 30px 30px;
+    border-bottom: 1px solid rgb(235,235,235);
+}
+.rol1 li{
+    font-weight:bolder;
+}
+.rol1 li:nth-child(1)
+{
+    padding: 0 15% 0 0;
+}
+.rol1 li:nth-child(2)
+{
+    padding: 0 30% 0 0;
+}
+.rol1 li:nth-child(3)
+{
+    padding: 0 15% 0 0;
+}
+.rol2 {
+    width:100%;
+    margin: 0 0 0 3%;
+    list-style: none;
+    display: flex;
+    padding: 30px 0 30px 30px;
+}
+.rol2 li{
+    font-weight:bolder;
+    padding: 0 10% 0 0;
+}
+.quantity {
+    text-align: center;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgb(245,245,247);
+    border: none;
+    position: relative;
+    width: 100px;
+}
+.reduce, .increase {
+    z-index: 100;
+    position: absolute;
+    color: rgb(0,101,204);
+    cursor:pointer;
+}
+.reduce{
+    margin: 5px 3px;
+}
+.increase{
+    margin:5px 90px;
+}
+.fa-trash{
+    margin:0 40px;
+}
+.update_and_continue
+{
+    text-align:right;
+    padding:0 0 30px 0
+}
+.update_and_continue span{
+    border:1px solid rgb(0,101,204);
+    margin-right:30px;
+    border-radius:10px;
+    color:rgb(0,101,204);
+    padding:10px;
+}
+form{
+    height:fit-content;
+    padding:10px;
+    border-radius:10px;
+    background:white;
+    margin:10px 30px;
+    width:25%;
+}
+.coupon{
+    border: 2px solid rgb(235,235,235);
+    margin:0 6%;
+    width:90%;
+    border-radius:10px;
+}
+.coupon input {
+    font-size:17px;
+    background:none;
+    border:none;
+    outline:none;
+    padding: 15px 0;
+}
+.coupon span {
+    float: right;
+    color: white;
+    border: 2px solid rgb(170,170,170);
+    padding: 13.5px 13.5px 13.5px 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(170,170,170);
+    height: 5%;
+}
+.total{
+    margin-top:30px;
+    width:90%;
+    margin-left:20px;
+}
+.agree {
+    width: 80%;
+    margin-left: 20px;
+}
+.agree input{
+    width:20px;
+    height:20px;
+}
+.checkout {
+    border:none;
+    background-color: rgb(0,101,204);
+    margin-left: 20px;
+    width: 90%;
+    border-radius:10px;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}

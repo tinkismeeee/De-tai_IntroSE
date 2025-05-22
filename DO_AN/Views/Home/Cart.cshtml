@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/css/Cart.css" />
+    <script src="https://kit.fontawesome.com/3e21e075ef.js" crossorigin="anonymous"></script>
+    <title>Cart</title>
+</head>
+<body>
+    <div style="padding:5px 4.3%; background: white; height: fit-content"><span style="margin:0px 0;padding:0px 30px;font-size:15px; color: rgb(81,81,84)">Home > Cart</span></div>
+    <div id="cart" class="cart">
+        <div class="product">
+            <ul class="rol1">
+                <li>Image</li>
+                <li>Product(s)</li>
+                <li>Price</li>
+                <li>Qty.</li>
+            </ul>
+            <ul class="rol2">
+                <li><img src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_80.png" /></li>
+                <li>
+                    <span>iPhone 14 Pro Max 128gb</span>
+                    <p style="color:gray">color:Sliver</p>
+                    <p style="color: rgb(0,101,204) ">Edit</p>
+                </li>
+                <li><span id="price">26490000</span><span>₫</span></li>
+                <li><span class="reduce" id="reduce">-</span><span id="increase" class="increase">+</span><input onchange="calculatorBill()" class="quantity" id="quantity" type="text" /><i style="color:gray" class="fa-solid fa-trash"></i></li>
+            </ul>
+            <p class="update_and_continue"><span>Update shopping cart</span><span>Continue shopping</span></p>
+        </div>
+        <form>
+            <p class="coupon"> <input id="reduce_coin" type="text" placeholder="Coupon code" /><span>Apply coupon</span></p>
+            <p style="color: rgb(134,134,139) " class="total">Sub -Total: <span id="total" style="margin-left:50%;color:black; font-weight:bolder;"></span></p>
+            <p style="color: black; font-weight: bolder; border-bottom: 1px solid rgb(81,81,84);padding-bottom:20px; " class="total">Total: <span id="total1" style="margin-left: 56%;font-size:18px; color: rgb(0,101,204); font-weight: bolder; "></span></p>
+            <p class="agree"><input type="checkbox" />I agree with the terms of service and I adhere to them unconditionally <span style="color: rgb(0,101,204);">terms of service</span>  of website</p>
+            <a href="/Home/PayProduct"><input class="checkout" type="button" value="Checkout" /></a>
+            <p style="color:red;margin-left:20px">Additional charges will be calculated when you proceed the payment</p>
+        </form>
+    </div>
+    <script src="~/js/CartJS.js"></script>
+</body>
+</html>

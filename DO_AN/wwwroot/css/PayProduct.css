@@ -1,0 +1,44 @@
+﻿body {
+    background-color: #e6e6e6;
+    width: 100%;
+    margin: 0;
+}
+.main {
+    display: flex;
+    justify-content: center;
+}
+.board {
+    border-radius:10px;
+    background-color: white;
+    display: inline-block;
+    padding: 0px 10px;
+    margin: 20px 0;
+    width: 40%;
+}
+.board> h1 {
+    text-align: center;
+    font-size: 19px;
+    margin-top: 19px;
+}
+.board p span{
+    font-weight: bolder;
+}
+.product{
+    padding: 5px 5px 5px 35px;
+    border-radius: 5px;
+    border:1px solid rgb(235,235,235);
+}
+.button{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.button button{
+    width: 50%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: white;
+    background: rgb(1,100,204);
+}
+

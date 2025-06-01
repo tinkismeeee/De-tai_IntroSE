@@ -17,11 +17,16 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    // Iphone
     public IActionResult Privacy()
     {
         return View();
     }
+    public IActionResult iphone_page_2()
+    {
+        return View();
+    }
+    //
     public IActionResult Sell_Equipment()
     {
         return View();

@@ -57,6 +57,24 @@
     width:100%;
     padding-top:20px;
 }
+.equipment > span.price-ratio {
+    border-radius: 12px;
+    border-bottom-right-radius: 18px;
+    padding: 12px 20px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+    top: 0;
+    left: -9px;
+    background: url("https://shopdunk.com/images/uploaded-source/icon/price-ratio.png") left center no-repeat;
+    width: auto;
+    height: 31px;
+    background-size: cover;
+    margin-left: -19px;
+}
 .equipment> img
 {
     display: flex;
@@ -178,4 +196,3 @@
     right: 50px;
 }body {
 }
-

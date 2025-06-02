@@ -92,7 +92,7 @@ div.equipment div.price-container p.price span.old-price{
     background-size: cover;
     margin-left: -19px;
 }
-.equipment> img
+.equipment > a > img
 {
     display: flex;
     justify-content: center;

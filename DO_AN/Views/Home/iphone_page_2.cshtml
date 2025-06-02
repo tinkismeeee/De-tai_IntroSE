@@ -263,7 +263,12 @@
                 </div>
             </div>
         </div>
-        @*<span><i class="fa-solid fa-chevron-right"></i></span>*@
+        <div class="next_page" style="text-align:center">
+            <a href="@Url.Action("Privacy","Home")"><span><i class="fa-solid fa-chevron-left"></i></span></a>
+            <a href="/Home/Privacy" style="text-decoration: none;"><span style=" background-color: white; color: black; cursor: pointer">1</span></a>
+            <a href="#" style="text-decoration: none;"><span style="">2</span></a>
+            <a href="#"><span><i class="fa-solid fa-chevron-right"></i></span></a>
+        </div>
         
     </section>
     <script src="~/js/HomepageJS.js"></script>

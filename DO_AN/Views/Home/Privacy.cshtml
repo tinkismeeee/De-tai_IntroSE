@@ -41,7 +41,7 @@
                     <a href="#"><img style="width:auto;height:auto;float:right" src="~/img/moi_mo_ban.png" /></a>
                     <span class="price-ratio">Giảm 17%</span>
                     <br />
-                    <img style="padding:0 1%;" title="iPhone 16" src="https://shopdunk.com/images/thumbs/0030771_iphone-16-128gb_240.png" />
+                    <a href="/Buy/iphone16_128gb"><img style="padding:0 1%;margin-top: 12px" title="iPhone 16" src="https://shopdunk.com/images/thumbs/0030771_iphone-16-128gb_240.png" /></a>
                     <p class="name_equipment" style="font-size: 20px; font-weight: bolder">iPhone 16 128GB</p>
                     <div class="price-container">
                         <p class="price" style="color: rgb(134,134,139)">
@@ -262,11 +262,11 @@
                 </div>
             </div>
         </div>
-        @*<span><i class="fa-solid fa-chevron-right"></i></span>*@
         <div class="next_page" style="text-align:center">
-            <span>1</span>
-            <span>2</span>
-            <a href="/Home/iphone_page_2"><span><i class="fa-solid fa-chevron-right"></i></span></a>
+            <a href="@Url.Action("Privacy","Home")"><span><i class="fa-solid fa-chevron-left"></i></span></a>
+            <a href="/Home/Privacy" style="text-decoration: none;"><span style="cursor: pointer;">1</span></a>
+            <a href="/Home/iphone_page_2" style="text-decoration: none;"><span style=" background-color: white; color: black; cursor: pointer">2</span></a>
+            <a href="@Url.Action("iphone_page_2","Home")"><span><i class="fa-solid fa-chevron-right"></i></span></a>
         </div>
     </section>
     <script src="~/js/HomepageJS.js"></script>

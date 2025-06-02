@@ -1,0 +1,246 @@
+﻿@model IEnumerable<DO_AN.Models.Accessory>
+
+@{
+    ViewData["Title"] = "Accessories";
+    // Đảm bảo file _Layout.cshtml của bạn được tham chiếu đúng cách
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* General page styling */
+    .accessory-page-container {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .page-title-custom {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+
+    /* Product Item Styling (Card) */
+    .product-item-box {
+        margin-bottom: 30px; /* Space below each card */
+    }
+
+    .product-item-card {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        height: 100%; /* Ensure cards in the same row have same height */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-item-card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        transform: translateY(-5px);
+    }
+
+    .product-item-card .picture {
+        position: relative;
+        text-align: center;
+        padding: 15px;
+        background-color: #f8f9fa; /* Light background for image area */
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .product-item-card .product-image {
+        max-width: 100%;
+        height: 200px; /* Fixed height for image container */
+        object-fit: contain; /* Ensures image fits without cropping, maintains aspect ratio */
+        transition: transform 0.3s ease;
+    }
+    .product-item-card:hover .product-image {
+        transform: scale(1.05);
+    }
+
+    .product-tag-overlay {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #dc3545; /* Red for discount */
+        color: white;
+        padding: 3px 8px;
+        font-size: 0.75rem;
+        font-weight: bold;
+        border-radius: 4px;
+        z-index: 1;
+    }
+
+    .product-item-card .details {
+        padding: 15px;
+        flex-grow: 1; /* Allow details section to fill available space */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Push buttons to bottom */
+    }
+
+    .product-item-card .product-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.5rem;
+        height: 3.3em; /* Approx 2 lines, adjust based on line-height */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .product-item-card .product-title a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .product-item-card .product-title a:hover {
+        color: #007bff;
+    }
+
+    .product-item-card .prices {
+        margin-bottom: 0.75rem;
+    }
+
+    .product-item-card .actual-price {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #d9534f; /* Red color for price */
+    }
+
+    .product-item-card .old-price {
+        font-size: 0.9rem;
+        color: #777;
+        text-decoration: line-through;
+        margin-left: 8px;
+    }
+
+    .product-description-short {
+        font-size: 0.85rem;
+        color: #555;
+        height: 3.6em; /* Approx 3 lines */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 1rem;
+    }
+
+    .product-item-card .buttons .btn {
+        font-size: 0.9rem;
+        padding: 0.375rem 0.75rem;
+        margin-top: 5px; /* Add some space above buttons */
+    }
+    .btn-buy-now {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: white;
+        width: 100%; /* Make button full width of its container */
+        margin-bottom: 5px;
+    }
+    .btn-buy-now:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+        color: white;
+    }
+    .btn-details-custom {
+        width: 100%;
+    }
+
+    /* Responsive adjustments */
+    @@media (max-width: 767px) {
+        .product-item-card .product-image {
+            height: 180px;
+        }
+        .product-item-card .product-title {
+            font-size: 1rem;
+            height: 3em; /* Adjust for smaller font */
+        }
+        .product-description-short {
+            height: 3.3em;
+        }
+    }
+    @@media (max-width: 575px) {
+        .product-item-card .product-image {
+            height: 160px;
+        }
+    }
+</style>
+
+<div class="container accessory-page-container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="page-title-custom">@ViewData["Title"]</h1>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+            <div class="row">
+            @foreach (var item in Model)
+            {
+                // Simulate OldPrice and Discount for demonstration
+                // In a real app, these would come from your model or be calculated based on promotions
+                var oldPrice = item.Price * 1.20m; // Example: 20% markup for old price
+                var discountPercentage = 0;
+                if (oldPrice > item.Price && oldPrice > 0)
+                {
+                    discountPercentage = (int)Math.Round(((oldPrice - item.Price) / oldPrice) * 100);
+                }
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 product-item-box">
+                            <div class="product-item-card">
+                                <div class="picture">
+                            @if (discountPercentage > 0)
+                            {
+                                            <div class="product-tag-overlay">Giảm @discountPercentage%</div>
+                            }
+                                    <a asp-action="Details" asp-route-id="@item.Id">
+                                        <img src="@(string.IsNullOrEmpty(item.ImageUrl) ? "https://placehold.co/300x200/e1e1e1/909090?text=No+Image" : item.ImageUrl)"
+                                             class="product-image" alt="@item.Name" title="View details for @item.Name"
+                                             onerror="this.onerror=null; this.src='https://placehold.co/300x200/e1e1e1/909090?text=Image+Error';">
+                                    </a>
+                                </div>
+                                <div class="details">
+                                    <div>
+                                        <h5 class="product-title">
+                                            <a asp-action="Details" asp-route-id="@item.Id" title="@item.Name">@item.Name</a>
+                                        </h5>
+                                        <div class="prices">
+                                            <span class="actual-price">@item.Price.ToString("N0") ₫</span>
+                                    @if (discountPercentage > 0)
+                                    {
+                                                    <span class="old-price">@oldPrice.ToString("N0") ₫</span>
+                                    }
+                                        </div>
+                                @if (!string.IsNullOrEmpty(item.Description))
+                                {
+                                                <p class="product-description-short">
+                                        @(item.Description.Length > 80 ? item.Description.Substring(0, 80) + "..." : item.Description)
+                                                </p>
+                                }
+                                    </div>
+                                    <div class="buttons mt-auto">
+                                        <a href="#" class="btn btn-buy-now">Mua ngay</a>
+                                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-secondary btn-details-custom">Xem chi tiết</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            }
+            </div>
+    }
+    else
+    {
+            <div class="alert alert-info mt-4" role="alert">
+                No accessories currently available. Please <a asp-action="Create" class="alert-link">add a new accessory</a>.
+            </div>
+    }
+</div>
+
+@*
+    Để sử dụng icon Font Awesome (ví dụ: fas fa-plus) cho nút "Create New",
+    bạn cần thêm link Font Awesome vào <head> của file _Layout.cshtml nếu chưa có:
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+*@

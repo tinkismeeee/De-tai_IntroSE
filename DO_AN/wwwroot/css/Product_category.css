@@ -29,7 +29,7 @@
     font-size: 30px;
 }
 .classify_equipment {
-    display:flex;
+    display: flex;
     width:87%;
     margin: 20px 0 0 6%;
     max-width: 1000px;

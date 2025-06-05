@@ -12,7 +12,7 @@
     display:flex;
     width: 600px;
     margin: 20px 0 0 6%;
-    height: 1000px;
+    height: 400px;
     margin-left: 40px;
     border-radius: 10px;
 }
@@ -282,23 +282,82 @@
     margin-bottom: 20px;
     border: 2px solid #0066CC;
 }
-.swiper-container {
-  width: 100%;
-  height: 400px;
+.detail-section {
+    margin-left: 20px;
+    padding: 0 0 20px 20px;
+    max-width: 1185px;
 }
-
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.detail-section ul.tab-detail {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    padding: 20px 20px;
+    justify-content: center;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #000; /* Màu nút điều hướng */
-  font-size: 18px;
+.detail-section ul.tab-detail li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    gap: 100px;
 }
-
-.swiper-pagination-bullet {
-  background-color: #000; /* Màu của các điểm phân trang */
+.detail-section ul.tab-detail > li.product-detail-item > a {
+    border: 1px solid #D2D2D7;
+    text-decoration: none;
+    border-radius: 10px;
+    color: black;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    line-height: 50px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding: 5px 5px;
+}
+.technical-specification table.technical-specification-table{
+    border-collapse: collapse;
+    width: 1185px;
+}
+.technical-specification table.technical-specification-table tr #odd, .technical-specification table.technical-specification-table tr #odd-description{
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: rgb(0, 0, 0); 
+    background: #f4f4f4;
+    border: none;
+}
+#technical-specification table.technical-specification-table #odd {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#technical-specification table.technical-specification-table #odd-desciption {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.technical-specification table.technical-specification-table tr #even, .technical-specification table.technical-specification-table tr #even-description {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: rgb(0, 0, 0); 
+    background: #ffffff;
+    border: none;
+}
+#technical-specification table.technical-specification-table #even {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#technical-specification table.technical-specification-table #even-desciption {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#even-description > p, #odd-description > p {
+    text-align: left;
+    margin-left: 200px;
+}
+#odd, #even-description {
+    max-width: 100px;
 }

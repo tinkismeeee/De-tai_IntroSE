@@ -1,8 +1,10 @@
 ﻿<head>
     <meta charset="utf-8" />
     <title>Tên title</title>
-    <link rel="stylesheet" href="~/css/iPhone_Buy/iphone16_128gb.css?v=5" />
+    <link rel="stylesheet" href="~/css/iPhone_Buy/iphone16_128gb.css?v=" />
     <script src="https://kit.fontawesome.com/3e21e075ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -22,9 +24,8 @@
     <section class="center">
         <div class="media-section">
             <div class="video-grid">
-                <iframe width="500" height="500" src="https://www.youtube.com/embed/knkR8YTWTU8" title="iPhone 16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="500" height="500" src="https://www.youtube.com/embed/knkR8YTWTU8?autoplay=1&controls=0" title="iPhone 16" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-            <div class="image-grid"></div>
         </div>
         <div class="info-section">
             <div class="product-name">
@@ -89,56 +90,118 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup -->
             <div class="popup-store-avaibility">
-                <p id="openPopupLink" onclick="openPopup()" style="margin-left: 10px; font-size: 13.5px;"><i class="fa-solid fa-hotel" style="color: #009bfc;"></i><span style="color: #009bfc;">&nbsp;Xem cửa hàng có sẵn sản phẩm</span></p>
-
-                <!--  -->
+                <p id="openPopupLink" onclick="openPopup()" style="margin-left: 10px; font-size: 13.5px; cursor: pointer; margin-top: 20px; margin-bottom: 20px;"><i class="fa-solid fa-hotel" style="color: #009bfc;"></i><span style="color: #009bfc;">&nbsp;Xem cửa hàng có sẵn sản phẩm</span></p>
                 <div id="popup" class="popup">
                     <div class="popup-content">
                         <span class="close-btn" onclick="closePopup()">&times;</span>
                         <h2>Cửa hàng có sản phẩm (11)</h2>
                         <div class="store-list">
+                        <!-- 1 -->
                         <h3>1. Hà Nội - 2 cửa hàng</h3>
                         <div class="store-item">
-                            <strong>SHOPDUNK HNI12 (275 Minh Khai HN)</strong>
-                            <p><span class="icon">📍</span> 275 Minh Khai, phường Vĩnh Tuy, quận Hai Bà Trưng, thành phố Hà Nội, Việt Nam</p>
-                            <p><span class="icon">📞</span> 0981.994.753</p>
+                            <strong>SHOPDUNK HNI12 (275 Minh Khai, Hà Nội)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;275 Minh Khai, phường Vĩnh Tuy, quận Hai Bà Trưng, thành phố Hà Nội, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.994.753</p>
                         </div>
+                        <hr>
                         <div class="store-item">
                             <strong>SHOPDUNK HNI29 (63 Nguyễn Hoàng, Nam Từ Liêm, Hà Nội)</strong>
-                            <p><span class="icon">📍</span> Số 63 Nguyễn Hoàng, phường Mỹ Đình 2, quận Nam Từ Liêm, thành phố Hà Nội, VN</p>
-                            <p><span class="icon">📞</span> 0981.000.730</p>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;Số 63 Nguyễn Hoàng, phường Mỹ Đình 2, quận Nam Từ Liêm, thành phố Hà Nội, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.000.730</p>
                         </div>
-
-                        <h3>2. TP Hồ Chí Minh - 7 cửa hàng</h3>
+                        <!-- 2 -->
+                        <h3>2. Tp. Hồ Chí Minh - 7 cửa hàng</h3>
                         <div class="store-item">
-                            <strong>SHOPDUNK HCM12 (581 Phan Văn Trị, HCM)</strong>
-                            <p><span class="icon">📍</span> Địa chỉ cửa hàng ở đây...</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
-                            <p><span class="icon">📞</span> 0123.456.789</p>
+                            <strong>SHOPDUNK HCM12 (581 Phan Văn Trị, Tp.HCM)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;581 Phan Văn Trị, P.5, quận Gò Vấp, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.113.910</p>
                         </div>
-                        <!-- Thêm các cửa hàng khác -->
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HCM9 (274 Xô Viết Nghệ Tĩnh, Tp.HCM)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;274 Xô Viết Nghệ Tĩnh, P.25, quận Bình Thạnh, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.113.910</p>
+                        </div>
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HCM1 (113 đường 3/2, Tp.HCM)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;Số 133 đường 3/2 P.11, Quận 10, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0949.742.654</p>
+                        </div>
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HCM3 (120 Phan Đăng Lưu, Tp.HCM)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;120 Phan Đăng Lưu, P.3, Quận Phú Nhuận, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.988.675</p>
+                        </div>
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HCM14 (59 Võ Văn Ngân, Tp.HCM)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;59 Võ Văn Ngân, P.Linh Chiểu, Tp.Thủ Đức, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0967.123.502</p>
+                        </div>
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HCM19 (728 Tỉnh Lộ 10, Tp.HCM</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;728 Tỉnh Lộ 10, P.Bình Trị Đông, Quận Bình Tân, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.061.218</p>
+                        </div>
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HCM2 (467 Quang Trung, Tp.HCM)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;465-467 Quang Trung, P.10, Quận Gò Vấp, Tp.Hồ Chí Minh, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0961.960.008</p>
+                        </div>
+                        <h3>3. Khác - 2 cửa hàng</h3>
+                        <div class="store-item">
+                            <strong>SHOPDUNK HDG2 (31 Trần Hưng Đạo, Hải Dương)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;31 Trần Hưng Đạo, P.Trần Hưng Đạo, Tp.Hải Dương, tỉnh Hải Dương, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.290.440</p>
+                        </div>
+                        <hr>
+                        <div class="store-item">
+                            <strong>SHOPDUNK DNG2 (237 Điện Biên Phủ, Đà Nẵng)</strong>
+                            <p><i class="fa-solid fa-location-dot"></i>&nbsp;237 Điện Biên Phủ, P.Hòa Khê, Quận Thanh Khê, TP.Đà Nẵng, Việt Nam</p>
+                            <p><i class="fa-solid fa-phone"></i></span>0981.826.242</p>
+                        </div>
                         </div>
                     </div>
                 </div>
-            
-                <!--  -->
-
+            </div>
+            <!--  -->
+            <div class="product-detail-action-button">
+                <div class="add-to-cart-button">
+                    <button type="button">Mua ngay</button>
+                </div>
+                <div class="business-installment">
+                    <button type="button">
+                        <p style="font-weight: bold; font-size: 18px; color: #0066CC">Mua trả góp 0%</p>
+                        <p style="margin-top: -10px; color: #0066CC;">Qua công ty tài chính</p>
+                    </button>
+                    <button type="button">
+                        <p style="font-weight: bold; font-size: 18px; color: #0066CC">Trả góp 0% qua thẻ</p>
+                        <p style="margin-top: -10px; color: #0066CC;">Visa, Mastercard, JCB, Amex</p>
+                    </button>
+                </div>
+                <div class="swap-button">
+                    <button type="button"><i class="fa-solid fa-rotate"></i>&nbsp;Thu cũ đổi mới</button>
+                </div>
+            </div>
+            <div class="border-box" style="margin-top: -10px;">
+                <div class="product-privacy">
+                    <div class="short-description">
+                        <p><i class="fa-solid fa-circle-check" style="color: #0066CC;"></i><span>&nbsp;&nbsp;Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Type C</span></p>
+                        <p><i class="fa-solid fa-circle-check" style="color: #0066CC;"></i><span>&nbsp;&nbsp;Miễn phí 1 đổi 1 trong 30 ngày đầu (nếu có lỗi do NSX)</span></p>
+                        <p><i class="fa-solid fa-circle-check" style="color: #0066CC;"></i><span>&nbsp;&nbsp;Bảo hành chính hãng 1 năm</span></p>
+                        <p><i class="fa-solid fa-circle-check" style="color: #0066CC;"></i><span>&nbsp;&nbsp;Giao hàng nhanh toàn quốc</span></p>
+                        <p><i class="fa-solid fa-circle-check" style="color: #0066CC;"></i><span>&nbsp;&nbsp;Tax Refund For Foreingers</span></p>
+                    </div>
+                </div>
             </div>
         </div>
+        <hr>
         <div class="other-section">
 
         </div>

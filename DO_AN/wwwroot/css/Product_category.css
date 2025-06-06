@@ -7,6 +7,10 @@
 .Series_Iphone span{
     padding:10px 2% 3%;
 }
+.Series_Iphone a {
+    padding:10px 2% 3%;
+    text-decoration: none;
+}
 .Series_Iphone span:nth-child(1) {
     font-weight:bolder;
     color:rgb(0,101,204);

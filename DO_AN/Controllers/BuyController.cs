@@ -8,5 +8,17 @@ namespace DO_AN.Controllers
         {
             return View();
         }
+        public IActionResult iphone16pro_128gb()
+        {
+            return View();
+        }
+        public IActionResult iphone16series_only()
+        {
+            return View();
+        }
+        public IActionResult iphone15series_only()
+        {
+            return View();
+        }
     }
 }

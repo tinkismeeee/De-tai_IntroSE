@@ -24,5 +24,17 @@ namespace DO_AN.Controllers
         {
             return View();
         }
+        public IActionResult iphone13series_only()
+        {
+            return View();
+        }
+        public IActionResult iphone12series_only()
+        {
+            return View();
+        }
+        public IActionResult iphone11series_only()
+        {
+            return View();
+        }
     }
 }

@@ -76,7 +76,7 @@ div.equipment div.price-container p.price span.old-price{
 }
 .equipment a > p{
     width:100%;
-    padding-top:20px;
+    padding-top:0px;
 }
 .equipment > span.price-ratio {
     border-radius: 12px;

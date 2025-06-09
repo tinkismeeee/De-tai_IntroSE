@@ -36,5 +36,9 @@ namespace DO_AN.Controllers
         {
             return View();
         }
+        public IActionResult iPad_Air_M3_11inch_Wifi()
+        {
+            return View();
+        }
     }
 }

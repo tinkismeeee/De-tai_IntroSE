@@ -68,6 +68,7 @@ header {
 }
 .header2-zoomout i {
     font-size: 25px;
+    z-index: 1;
 }
 
 .User {
@@ -155,8 +156,9 @@ display: flex;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    width: 900px;
+    width: 815px;
     height: 75px;
+    z-index: -1;
 }
 .menu .dropdown-menu-header ul li {
     float: left;

@@ -3,36 +3,54 @@
 <head>
   <meta charset="utf-8" />
     <title>Log in</title>
-    <link rel="stylesheet" href="~/css/Login.css" />
+    <link rel="stylesheet" href="~/css/Login.css?v=1" />
     <script src="https://kit.fontawesome.com/3e21e075ef.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 </head>
 <body>
     <div class="page"><a>Home Page</a>><a>Login</a></div>
     <div class="main">
         <img style="width:50%;height:500px;" src="https://shopdunk.com/images/uploaded/banner/VNU_M492_08%201.jpeg" />
-        <form>
-            <h1>Đăng ký</h1>
+        <form method="post">
+            <h1>Đăng nhập</h1>
             <div class="dangnhap">
                 <p>Tên đăng nhập:</p>
                 <input type="text" name="tendangnhap" id="tendangnhap" />
+                <script>
+                    const username = document.getElementById("tendangnhap");
+                    username.addEventListener("input", function () {
+                        flag = false;
+                        document.getElementById('error').style.visibility = 'hidden';
+                    });
+                </script>
             </div>
             <div class="matkhau">
                 <p>Mật khẩu:</p>
                 <input type="text" name="nhapmatkhau" id="nhapmatkhau" />
+                <script>
+                    const password = document.getElementById("nhapmatkhau");
+                    password.addEventListener("input", function () {
+                        flag = false;
+                        document.getElementById('error').style.visibility = 'hidden';
+                    });
+                </script>
             </div>
-            <br/>
+            <p class="error">Tên đăng nhập hoặc mật khẩu không hợp lệ</p>
             <div class="nhomatkhau">
                 <input type="checkbox" class="check" /><span style="margin-left: 3px;">Nhớ mật khẩu</span><span style="width: 39%;float:right; color: rgb(0,101,204)">Quên mật khẩu</span>
             </div>
-            <br/>
-            <input type="submit" value="Đăng kí" class="button_dk" id="button_dk">
+            <br />
+            @*<input type="submit" value="Đăng nhập" class="button_dk" id="button_dk">*@
+            <input onlick="check()" type="submit" value="Đăng nhập" class="button_dk" id="button_dk" />
+            @*<input onclick="return validate()" type="submit" value="Đăng kí" class="button_dk" id="button_dk">*@
             <div class="chuacotk">
                 <span> Bạn Chưa Có Tài Khoản? </span>
                 <a href="/Home/Register">Tạo tài khoản ngay</a>
             </div>
         </form>
     </div>
+    <script src="~/js/LoginJS.js"></script>
 </body>
 </html>

@@ -7,6 +7,10 @@
 .Series_Iphone span{
     padding:10px 2% 3%;
 }
+.Series_Iphone a {
+    padding:10px 2% 3%;
+    text-decoration: none;
+}
 .Series_Iphone span:nth-child(1) {
     font-weight:bolder;
     color:rgb(0,101,204);
@@ -29,13 +33,15 @@
     font-size: 30px;
 }
 .classify_equipment {
-    display:flex;
+    display: flex;
     width:87%;
     margin: 20px 0 0 6%;
+    max-width: 1000px;
 }
 .classify_equipment a{
     display: block;
 }
+/* herf */
 .equipment a{
     color:black;
     display:block;
@@ -51,13 +57,46 @@
 }
 .equipment > p{
     width:100%;
-    padding-top:20px;
+    padding-top:0px;
+}
+div.equipment div.price-container p.price span.actual-price{
+    width:100%;
+    font-weight: bold;
+    font-size: 20px;
+}
+div.equipment div.price-container p.price span.old-price{
+    width:100%;
+    font-weight: bold;
+    margin-left: 5px;
+    font-size: 17px;
+    text-decoration: line-through;
+}
+.equipment .price-container {
+    padding-top:0px;
 }
 .equipment a > p{
     width:100%;
-    padding-top:20px;
+    padding-top:0px;
 }
-.equipment> img
+.equipment > span.price-ratio {
+    border-radius: 12px;
+    border-bottom-right-radius: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #fff;
+    top: 0;
+    left: -9px;
+    background: url("https://shopdunk.com/images/uploaded-source/icon/price-ratio.png") left center no-repeat;
+    width: auto;
+    height: 31px;
+    background-size: cover;
+    margin-left: -19px;
+}
+.equipment > a > img
 {
     display: flex;
     justify-content: center;
@@ -176,6 +215,4 @@
 }
 .btn.right{
     right: 50px;
-}body {
 }
-

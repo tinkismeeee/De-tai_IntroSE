@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>ShopIphone</title>
-    <link rel="stylesheet" href="~/css/MasterStyle.css" asp-append-version="true" />
+    <title>Điện thoại iPhone chính hãng giá tốt | ưu đãi đến 5 triệu</title>
+    <link rel="stylesheet" href="~/css/MasterStyle.css?v=1" asp-append-version="true" />
     <script src="https://kit.fontawesome.com/3e21e075ef.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link link rel="icon" href="https://shopdunk.com/icons/icons_0/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="above">
@@ -14,22 +15,42 @@
             <aside class="above-aside-left"></aside>
             <header>
                 <div class="header1-div">
-                    <a href="/Home"><img src="https://shopdunk.com/images/thumbs/0012445_Logo_ShopDunk.png" /></a>
+                    @* <a href="/Home"><img src="/img/UMT_logo.png" /></a> *@
+                    <a href="/Home"><img src="https://shopdunk.com/images/thumbs/0027333_logo-shopdunk.png" /></a>
                 </div>
             </header>
-            <nav class="menu">
-                <div>
-                    <a href="/Home/Privacy"><span>Iphone</span></a>
-                    <span>Ipad</span>
-                    <span>Mac</span>
-                    <span>Watch</span>
-                    <span>Sounds</span>
-                    <a href="/Accessory/Index"><span>Accessories</span></a>
-                    <span>Service <i class="fa-solid fa-angle-down" style="color: rgb(210,210,215);"></i></span>
+            <nav class="menu" style="z-index: 1;">
+                @* <div>
+                    <a href="/Home/Privacy"><span>iPhone</span></a>
+                    <a href="/Home/iPad"><span>iPad</span></a>
+                    <a href="#"><span>Mac</span></a>
+                    <a href="#"><span>Watch</span></a>
+                    <a href="#"><span>Sounds</span></a>
+                    <a href="#"><span>Accessories</span></a>
+                    <a href="#"><span class="">Service<i class="fa-solid fa-angle-down" style="color: rgb(210,210,215);"></i></span></a>
+                </div> *@
+                <div class="dropdown-menu-header">
+                    <ul>
+                        <li><a href="/Home/Privacy">iPhone</a></li>
+                        <li><a href="/Home/iPad">iPad</a></li>
+                        <li><a href="/Home/Macbook">Mac</a></li>
+                        <li><a href="#">Watch</a></li>
+                        <li><a href="#">Sounds</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">Services<i class="fa-solid fa-angle-down" style="color: rgb(210,210,215);"></i></a>
+                            <div class="dropdown-content">
+                                <a href="#">Bảo hành ủy quyền Apple</a>
+                                <a href="#">Apple Care</a>
+                                <a href="#">Bảo hành mở rộng</a>
+                                <a href="#">Bảo hành VIP 1 đổi 1</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </nav>
-            <header>
-                <div class="header2-div">
+            <header style="">
+                <div class="header2-div" style="margin-left: 180px; z-index: -1;" > @*style="margin-left: 180px;"*@
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <a href="/Home/Cart"><i class="fa-solid fa-bag-shopping"></i></a>
                     <i class="fa-regular fa-user">
@@ -58,7 +79,7 @@
         </div>
         <nav class="menu2">
             <div>
-                <a href="/Home/Privacy"><span>Iphone</span></a>
+                <a href="Views/Home/Privacy"><span>iPhone</span></a>
                 <span>Ipad</span>
                 <span>Mac</span>
                 <span>Watch</span>
@@ -79,9 +100,9 @@
         <div class="Register">
             <h1 style="text-align: center;">Sign Up For Latest New From Shopdunk</h1>
             <p style="text-align: center;">Latest Product And Sale</p>
-            <div class="subscribe">
-                <input type="text" placeholder="Enter your email here... " />
+            <div class="subscribe" style="align-items: center; max-width: auto;">
                 <span>Subscribe</span>
+                <input type="text" placeholder="Enter your email here... " style="margin-left: 55px;"/>
             </div>
         </div>
         <div class="above_footer">
@@ -140,7 +161,7 @@
                             <li>Purchase: <span style="color: rgb(0,101,204)">1900.6626</span></li>
                             <li>Complaint:<span style="color: rgb(0,101,204)">0886.308.688</span></li>
                             <li>Exterprise: <span style="color: rgb(0,101,204)">0822.688.688</span></li>
-                            </ul">
+                            </ul>
                     </div>
                 </div>
                 <div class="row2">

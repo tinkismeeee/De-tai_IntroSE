@@ -81,6 +81,7 @@ div > input {
     color: white;
     background-color: rgb(1,100,204);
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .error {

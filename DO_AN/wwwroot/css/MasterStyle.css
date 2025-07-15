@@ -27,7 +27,7 @@
 }
 header {
 
-    color: rgb(210,210,215);
+    color: #d2d2d7;
     padding: 5px;
     width: 15%;
     text-align: center;
@@ -68,15 +68,9 @@ header {
 }
 .header2-zoomout i {
     font-size: 25px;
+    z-index: 1;
 }
-.menu {
-    justify-content:space-between;
-    width: 50%;
-}
-.menu div {
-height: 100%;
-display: flex;
-}
+
 .User {
     box-shadow: 2px 10px 10px 2px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
@@ -84,7 +78,7 @@ display: flex;
     background-color: rgb(255, 255, 255);
     width: 200px;
     right: -50px;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 2px 20px;
     height: fit-content;
     border-radius: 10px;
@@ -116,12 +110,22 @@ display: flex;
     font-family:'Times New Roman', Times, serif;
     border-bottom: 1px solid rgb(81,81,84);
 }
-.menu div > span {
+/* .menu {
+    justify-content:space-between;
+    width: 50%;
+}
+.menu div {
+height: 100%;
+display: flex;
+} */
+
+/* .menu div > span {
     padding: 23px 20px;
     text-align: center;
     width: 100px;
     min-width:80px;
     color: rgb(210,210,215);
+    z-index: 2;
 }
 .menu div a{
     text-decoration: none;
@@ -130,7 +134,113 @@ display: flex;
     width: 100px;
     min-width:80px;
     color: rgb(210,210,215);
+} */
+/* .menu div > span:hover {
+    background: rgb(81,81,84);
+    filter: brightness(120%);
 }
+.menu div a:hover {
+    background: rgb(81,81,84);
+    filter: brightness(120%);
+} */
+.menu {
+    justify-content: space-between;
+    width: 50%;
+}
+.meun .dropdown-menu-header {
+    height: 100%;
+    display: flex;
+}
+.menu .dropdown-menu-header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 815px;
+    height: 75px;
+    z-index: -1;
+}
+.menu .dropdown-menu-header ul li {
+    float: left;
+}
+
+.menu .dropdown-menu-header ul li a, .dropbtn {
+    display: inline-block;
+    color: rgb(210,210,215);
+    text-align: center;
+    padding: 23px 20px;
+    text-decoration: none;
+    min-width: auto;
+    width: 75px;
+    min-width: 50px;
+    /* text-decoration: none;
+    padding: 23px 20px;
+    text-align: center;
+    width: 100px;
+    min-width:80px;
+    color: rgb(210,210,215);
+    display: inline-block; */
+    /* padding: 23px 20px;
+    text-align: center;
+    width: 100px;
+    min-width:80px;
+    color: rgb(210,210,215);
+    z-index: 2; */
+}
+.menu .dropdown-menu-header ul li a {
+    height: 75px;
+    /* text-decoration: none;
+    padding: 23px 20px;
+    text-align: center;
+    width: 100px;
+    min-width:80px;
+    color: rgb(210,210,215);
+    display: inline-block; */
+    /* padding: 23px 20px;
+    text-align: center;
+    width: 100px;
+    min-width:80px;
+    color: rgb(210,210,215);
+    z-index: 2; */
+}
+.menu .dropdown-menu-header ul li a:hover, .dropdown:hover .dropbtn {
+    background: rgb(81,81,84);
+    filter: brightness(120%);
+}
+
+.menu .dropdown-menu-header ul li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(81,81,84);
+    max-width: fit-content;
+    z-index: 1;
+    justify-content: center;
+    margin-top: -46px;
+}
+
+.dropdown-content a {
+    color: rgb(81,81,84);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block !important;
+    max-height: fit-content;
+    border-bottom: 0.1px solid rgb(235,235,235, 0.5);
+}
+
+.dropdown-content a:hover {
+    background: rgb(81,81,84);
+    filter: brightness(120%);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+} 
+
+
 .menu2 {
     background-color:white;
     top:0;
@@ -140,9 +250,9 @@ display: flex;
     padding:10px 0;
 }
 .menu2 div {
-height: fit-content;
-display: flex;
-width: 60%;
+    height: fit-content;
+    display: flex;
+    width: 60%;
 }
 
 .menu2 div span {
@@ -214,31 +324,24 @@ width: 60%;
     margin-left: 3px;
 }
 
-.menu div > span:hover {
-    background: rgb(81,81,84);
-    filter: brightness(120%);
-}
-.menu div a:hover {
-    background: rgb(81,81,84);
-    filter: brightness(120%);
-}
 .header2-div {
     text-align: center;
     list-style: none;
     display: flex;
     width: 25%;
     margin:0 50%;
-    padding: 20px
+    padding: 20px;
 }
 
 .header2-div i {
-    padding: 0 10px;
+    padding: 0 5px;
     text-align: center;
     font-size: 20px;
+    max-height: 30px;
 }
 .header2-div a i {
     color:#d2d2d7;
-    padding: 0 10px;
+    padding: 0 5px;
     text-align: center;
     font-size: 20px;
 }
@@ -344,9 +447,10 @@ col2 ul li {
     padding: 10px;
     background-color: rgb(0,101,204);
     z-index:2;
+    cursor: pointer;
 }
 .Register span:hover{
-    filter:brightness(120%)
+    filter:brightness(120%);
 }
 .subscribe{
     margin:0 31%;

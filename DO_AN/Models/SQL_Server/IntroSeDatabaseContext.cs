@@ -15,6 +15,8 @@ public partial class IntroSeDatabaseContext : DbContext
     {
     }
 
+    public virtual DbSet<CartInfo> CartInfos { get; set; }
+
     public virtual DbSet<UserInfo> UserInfos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,6 +25,44 @@ public partial class IntroSeDatabaseContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<CartInfo>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToTable("cart_info");
+
+            entity.Property(e => e.Email)
+                .HasMaxLength(100)
+                .HasColumnName("email");
+            entity.Property(e => e.Hovaten)
+                .HasMaxLength(100)
+                .HasColumnName("hovaten");
+            entity.Property(e => e.Id)
+                .HasMaxLength(100)
+                .HasColumnName("id");
+            entity.Property(e => e.Nam)
+                .HasMaxLength(100)
+                .HasColumnName("nam");
+            entity.Property(e => e.Ngay)
+                .HasMaxLength(100)
+                .HasColumnName("ngay");
+            entity.Property(e => e.Sodienthoai)
+                .HasMaxLength(100)
+                .HasColumnName("sodienthoai");
+            entity.Property(e => e.Soluong)
+                .HasMaxLength(100)
+                .HasColumnName("soluong");
+            entity.Property(e => e.Sotien)
+                .HasMaxLength(100)
+                .HasColumnName("sotien");
+            entity.Property(e => e.Tenhang)
+                .HasMaxLength(100)
+                .HasColumnName("tenhang");
+            entity.Property(e => e.Thang)
+                .HasMaxLength(100)
+                .HasColumnName("thang");
+        });
+
         modelBuilder.Entity<UserInfo>(entity =>
         {
             entity.HasKey(e => e.Username);

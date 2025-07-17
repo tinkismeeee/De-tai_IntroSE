@@ -1,0 +1,262 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung Tâm Bảo Hành - UMT Care</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/Service/authorized/authorized_warranty.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Service/authorized/authorized_body1.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Service/authorized/authorized_body2.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Service/authorized/authorized_body3.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Service/authorized/authorized_body4.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="top-header">
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Index">
+                <img src="~/img/UMT_logo.png" asp-append-version="true" />
+            </a>
+        </div>
+        <ul class="menu" style="margin-right: 150px">
+            <li><a href="#">DỊCH VỤ</a></li>
+            <li><a href="#">GIỚI THIỆU</a></li>
+            <li><a href="#">LIÊN HỆ</a></li>
+            <li><a href="#">TRA CỨU</a></li>
+            <li><a asp-controller="Home" asp-action="Index">MUA HÀNG TẠI UMT</a></li>
+        </ul>
+        <div class="lang-flag">
+            @* <img src="~/img/flagVN.jpg" asp-append-version="true" /> *@
+        </div>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="banner-container">
+            <div class="banner-image">
+                <img src="~/img/test.png" alt="Apple Products" asp-append-version="true" />
+            </div>
+            <div class="banner-text">
+                <h2>TRUNG TÂM BẢO HÀNH VÀ SỬA CHỮA<br />ỦY QUYỀN APPLE</h2>
+                <p>Dễ dàng tiếp nhận tại hơn 40 cửa hàng UMT và UMT Care trên toàn quốc.</p>
+                <a href="#">Đặt lịch ngay</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- DANH SÁCH DỊCH VỤ -->
+    <section class="service-section">
+        <div class="service-header">
+            <h2>Danh Sách Dịch Vụ</h2>
+            <p>Chúng tôi mang đến dịch vụ tận tâm và tiêu chuẩn chính hãng Apple</p>
+        </div>
+
+        <div class="service-list">
+            <!-- iPhone -->
+            <div class="service-item">
+                <img src="~/img/iphone.png" alt="Sửa chữa iPhone" />
+                <h4>Sửa chữa iPhone</h4>
+                <a href="/Services/authorized_services_fix/iphone_fix">Xem thêm</a>
+            </div>
+
+            <!-- iPad -->
+            <div class="service-item">
+                <img src="~/img/ipad.png" alt="Sửa chữa iPad" />
+                <h4>Sửa chữa iPad</h4>
+                <a href="/Services/authorized_services_fix/ipad_fix">Xem thêm</a>
+            </div>
+
+            <!-- Mac -->
+            <div class="service-item">
+                <img src="~/img/macbook.png" alt="Sửa chữa Mac" />
+                <h4>Sửa chữa Mac</h4>
+                <a href="/Services/authorized_services_fix/mac_fix">Xem thêm</a>
+            </div>
+
+            <!-- Watch -->
+            <div class="service-item">
+                <img src="~/img/watch.png" alt="Sửa chữa Watch" />
+                <h4>Sửa chữa Watch</h4>
+                <a href="/Services/authorized_services_fix/watch_fix">Xem thêm</a>
+            </div>
+
+            <!-- AirPods -->
+            <div class="service-item">
+                <img src="~/img/airpot.png" alt="Sửa chữa Airpods" />
+                <h4>Sửa chữa Airpods</h4>
+                <a href="/Services/authorized_services_fix/airpot_fix">Xem thêm</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- DANH SÁCH VẤN ĐỀ -->
+    <section class="problem-section">
+        <div class="problem-header">
+            <h2>Những vấn đề mà bạn gặp phải</h2>
+        </div>
+
+        <div class="problem-list">
+            <!-- camera -->
+            <div class="problem-item">
+                <img src="~/img/camera.jpeg"/>
+                <h4>Camera không hoạt động</h4>
+            </div>
+
+            <!-- battery -->
+            <div class="problem-item">
+                <img src="~/img/battery.jpeg"/>
+                <h4>Pin không sạc được</h4>
+            </div>
+
+            <!-- software -->
+            <div class="problem-item">
+                <img src="~/img/software.jpeg"/>
+                <h4>Vấn đề phần mềm</h4>
+            </div>
+
+            <!-- power -->
+            <div class="problem-item">
+                <img src="~/img/power.jpeg"/>
+                <h4>Thiết bị không thể khởi động</h4>
+            </div>
+
+            <!-- water -->
+            <div class="problem-item">
+                <img src="~/img/water.jpeg"/>
+                <h4>Thiết bị rơi vào nước</h4>
+            </div>
+
+            <!-- another -->
+            <div class="problem-item">
+                <img src="~/img/another.jpeg"/>
+                <h4>Thiết bị gặp vấn đề khác</h4>
+            </div>
+        </div>
+    </section>
+
+        <!-- Nút đăng ký-->
+    <div class="bannerbutton">
+        <div class="banner-container">
+            <div class="banner-text-button">
+                <a href="#">Đặt lịch sửa chữa ngay</a>
+            </div>
+        </div>
+    </div>
+    
+        <!-- Tại sao nên chọn dunk -->
+    <section class="why-section">   
+        <div class="why-header">
+            <h2>Tại sao nên chọn UMT Care?</h2>
+        </div>
+
+        <div class="why-list">
+
+            <div class="why-item">
+                <img src="~/img/icon1.jpeg"/>
+                <h4>Chính hãng</h4>
+                <p>Trong từng trường hợp cụ thể, chúng tôi sẽ kiểm tra và sẽ có chuẩn đoán về tình trạng máy để có thể xử lý. 
+                    Xin vui lòng đặt lịch hẹn để UMT Care hỗ trợ bạn một cách nhanh nhất</p>
+            </div>
+
+            <div class="why-item">
+                <img src="~/img/icon2.jpeg"/>
+                <h4>Chứng chỉ Apple </h4>
+                <p>100% các kỹ thuật viên đều được đào tạo và cấp chứng chỉ từ Apple</p>
+            </div>
+
+            <div class="why-item">
+                <img src="~/img/icon3.jpeg"/>
+                <h4>Cam kết bảo mật</h4>
+                <p>Dữ liệu người dùng được kiểm soát thông qua các tiêu chuẩn kiểm soát nội bộ nghiêm ngặt. 
+                    Đảm bảo tính bảo mật cho toàn bộ khách hàng</p>
+            </div>
+
+            <div class="why-item">
+                <img src="~/img/icon4.jpeg"/>
+                <h4>Tăng thời gian bảo hành sau khi sửa chữa</h4>
+                <p>Linh kiện thay thế được bảo hành 90 ngày, kể cả khi máy hết bảo hành</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+@* <footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-column UMT-info">
+            <div class="footer-logo">
+                <img src="~/img/logo.png">
+            </div>
+            <p>Trung tâm bảo hành và sửa chữa ủy quyền Apple</p>
+            <p>Hotline: 1900.8036 - 0985.992.469</p>
+            <p>Mở cửa: 8:30 – 20:00 từ T2 đến T7</p>
+            <p class="address">Địa chỉ: Tầng 3, số 161 Xã Đàn, phường Phương Liên – Trung Tự, quận Đống Đa, TP Hà Nội</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>THÔNG TIN</h4>
+            <ul>
+                <li><a href="#">Chính sách bảo hành</a></li>
+                <li><a href="#">Chính sách bảo mật</a></li>
+                <li><a href="#">Quy định thanh toán</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>DỊCH VỤ SỬA CHỮA</h4>
+            <ul>
+                <li><a href="#">Sửa chữa iPhone</a></li>
+                <li><a href="#">Sửa chữa iPad</a></li>
+                <li><a href="#">Sửa chữa Mac</a></li>
+                <li><a href="#">Sửa chữa Watch</a></li>
+                <li><a href="#">Sửa chữa Airpods</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column connect-us">
+            <h4>KẾT NỐI VỚI UMT CARE</h4>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/UMT.store"
+                class="social-icon facebook"
+                target="_blank"
+                rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://zalo.me/3937868610324741136"
+                class="social-icon zalo"
+                target="_blank"
+                rel="noopener noreferrer">
+                    <img src="zalo-icon.png" alt="Zalo">
+                </a>
+
+                <a href="https://youtu.be/dQw4w9WgXcQ?si=iruD0sHUj4_UlrJo"
+                class="social-icon youtube"
+                target="_blank"
+                rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <p class="nationwide-text">Hệ thống bảo hành toàn quốc</p>
+            <div class="UMT-app-logo">
+                <img src="UMT-app-logo.png" alt="UMT App Logo">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">
+        <p>&copy; 2016 Công ty Cổ Phần HESMAN VIỆT NAM GPDKKD 0107459357 do Sở KH & ĐT TP. Hà Nội cấp ngày 09/06/2016.<br>
+        Địa chỉ: Số 76 Thái Hà, phường Trung Liệt, quận Đống Đa, thành phố Hà Nội, Việt Nam<br>
+        Đại diện pháp luật: PHẠM MẠNH HOA | Đt: (024)73059999 | Email: lienhe@UMT.com</p>
+    </div>
+</footer> *@
+
+</html>

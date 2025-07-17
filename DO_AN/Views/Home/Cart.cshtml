@@ -7,36 +7,63 @@
     <title>Cart</title>
 </head>
 <body>
-    <div style="padding:5px 4.3%; background: white; height: fit-content"><span style="margin:0px 0;padding:0px 30px;font-size:15px; color: rgb(81,81,84)">Home > Cart</span></div>
+    <div class="breadcrumb">
+        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" style="list-style-type: none; flex-wrap: nowrap; display: inline-block; white-space: nowrap;">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Trang chủ" itemprop="item" style="text-decoration: none;">Trang chủ</a> 
+                <span class="delimiter">›</span>
+                <span class="delimiter"><a title="Giỏ hàng" style="text-decoration: none;" href="#">Giỏ hàng</a></span>
+                <meta itemprop="position" content="1"><meta itemprop="name" content="Trang chủ">
+            </li>
+        </ul>
+    </div>
     <div id="cart" class="cart">
         <div class="product">
             <ul class="rol1">
-                <li>Image</li>
-                <li>Product(s)</li>
-                <li>Price</li>
-                <li>Qty.</li>
+                <li>Hình ảnh</li>
+                <li>Sản phẩm</li>
+                <li>Giá tiền</li>
+                <li>Số lượng</li>
             </ul>
             <ul class="rol2">
-                <li><img src="https://shopdunk.com/images/thumbs/0007808_iphone-14-pro-max-128gb_80.png" /></li>
+                <li><img src="https://shopdunk.com/images/thumbs/0030441_den_550.jpeg" style="max-width: 80px; max-height: 80px; margin-left: -20px;"/></li>
                 <li>
-                    <span>iPhone 14 Pro Max 128gb</span>
-                    <p style="color:gray">color:Sliver</p>
-                    <p style="color: rgb(0,101,204) ">Edit</p>
+                    <span style="margin-right: 100px;margin-left: 10px">iPhone 16 128GB</span>
+                    <p style="color:gray;margin-left:10px">color: Black</p>
                 </li>
-                <li><span id="price">2.649.0000</span><span>₫</span></li>
-                <li><span class="reduce" id="reduce">-</span><span id="increase" class="increase">+</span><input onchange="calculatorBill()" class="quantity" id="quantity" type="text" /><i style="color:gray" class="fa-solid fa-trash"></i></li>
+                <li><span id="price" style="margin-left:30px">18.890.000</span><span>₫</span></li>
+                <li><span class="reduce" id="reduce">-</span><span id="increase" class="increase">+</span><input onchange="calculatorBill()" class="quantity" id="quantity" type="text" /></li>
             </ul>
-            <p class="update_and_continue"><span>Update shopping cart</span><span>Continue shopping</span></p>
         </div>
+        <br>
         <form>
-            <p class="coupon"> <input id="reduce_coin" type="text" placeholder="Coupon code" /><span>Apply coupon</span></p>
-            <p style="color: rgb(134,134,139) " class="total">Sub -Total: <span id="total" style="margin-left:50%;color:black; font-weight:bolder;"></span></p>
+            <p class="coupon"> <input id="reduce_coin" type="text" placeholder="Coupon code" /><span style="margin-top: -50px;">Apply coupon</span></p>
+            <p style="color: rgb(134,134,139) " class="total">Sub-Total: <span id="total" style="margin-left:50%;color:black; font-weight:bolder;"></span></p>
             <p style="color: black; font-weight: bolder; border-bottom: 1px solid rgb(81,81,84);padding-bottom:20px; " class="total">Total: <span id="total1" style="margin-left: 56%;font-size:18px; color: rgb(0,101,204); font-weight: bolder; "></span></p>
             <p class="agree"><input type="checkbox" />I agree with the terms of service and I adhere to them unconditionally <span style="color: rgb(0,101,204);">terms of service</span>  of website</p>
             <a href="/Home/PayProduct"><input class="checkout" type="button" value="Checkout" /></a>
             <p style="color:red;margin-left:20px">Additional charges will be calculated when you proceed the payment</p>
         </form>
     </div>
-    <script src="~/js/CartJS.js"></script>
+    <div id="cart" class="cart" style="margin-top:-150px">
+        <div class="product">
+            <ul class="rol1">
+                <li>Hình ảnh</li>
+                <li>Sản phẩm</li>
+                <li>Giá tiền</li>
+                <li>Số lượng</li>
+            </ul>
+            <ul class="rol2">
+                <li><img src="https://shopdunk.com/images/thumbs/0035054_ipad-air-m3-11-inch-wi-fi_240.png" style="max-width: 80px; max-height: 80px; margin-left: -15px"/></li>
+                <li>
+                    <span>iPad Air M3 11 inch Wi-Fi 128GB</span>
+                    <p style="color:gray">color: Blue</p>
+                </li>
+                <li><span id="price" style="margin-left: 15px;">16.590.000</span><span>₫</span></li>
+                <li><span class="reduce" id="reduce">-</span><span id="increase" class="increase">+</span><input onchange="calculatorBill()" class="quantity" placeholder="1" id="quantity" type="text" /></li>
+            </ul>
+        </div>
+        <br>
+    </div>
+    <script src="~/js/CartJS.js?v=1"></script>
 </body>
 </html>

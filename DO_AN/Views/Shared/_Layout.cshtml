@@ -3,54 +3,45 @@
 <head>
     <meta charset="utf-8" />
     <title>Điện thoại iPhone chính hãng giá tốt | ưu đãi đến 5 triệu</title>
-    <link rel="stylesheet" href="~/css/MasterStyle.css?v=1" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/MasterStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Service/service-dropdown.css" asp-append-version="true" />
     <script src="https://kit.fontawesome.com/3e21e075ef.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link link rel="icon" href="https://shopdunk.com/icons/icons_0/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+    <!-- Header -->
     <div class="above">
         <div class="header-above1">
             <aside class="above-aside-left"></aside>
             <header>
                 <div class="header1-div">
-                    @* <a href="/Home"><img src="/img/UMT_logo.png" /></a> *@
-                    <a href="/Home"><img src="https://shopdunk.com/images/thumbs/0027333_logo-shopdunk.png" /></a>
+                    <a href="/Home"><img src="~/img/UMT_logo.png" /></a>
                 </div>
             </header>
-            <nav class="menu" style="z-index: 1;">
-                @* <div>
-                    <a href="/Home/Privacy"><span>iPhone</span></a>
-                    <a href="/Home/iPad"><span>iPad</span></a>
-                    <a href="#"><span>Mac</span></a>
-                    <a href="#"><span>Watch</span></a>
-                    <a href="#"><span>Sounds</span></a>
-                    <a href="#"><span>Accessories</span></a>
-                    <a href="#"><span class="">Service<i class="fa-solid fa-angle-down" style="color: rgb(210,210,215);"></i></span></a>
-                </div> *@
-                <div class="dropdown-menu-header">
-                    <ul>
-                        <li><a href="/Home/Privacy">iPhone</a></li>
-                        <li><a href="/Home/iPad">iPad</a></li>
-                        <li><a href="/Home/Macbook">Mac</a></li>
-                        <li><a href="#">Watch</a></li>
-                        <li><a href="#">Sounds</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropbtn">Services<i class="fa-solid fa-angle-down" style="color: rgb(210,210,215);"></i></a>
-                            <div class="dropdown-content">
-                                <a href="#">Bảo hành ủy quyền Apple</a>
-                                <a href="#">Apple Care</a>
-                                <a href="#">Bảo hành mở rộng</a>
-                                <a href="#">Bảo hành VIP 1 đổi 1</a>
-                            </div>
-                        </li>
+
+            <!-- Main menu -->
+            <nav class="menu">
+                <div>
+                    <span><a href="/Home/Privacy" style="color: inherit; text-decoration:none;">iPhone</a></span>
+                    <span><a href="/Home/iPad" style="color: inherit; text-decoration:none;">iPad</a></span>
+                    <span><a href="/Home/Macbook" style="color: inherit; text-decoration:none;">Mac</a></span>
+                    <span><a href="/Home/Watch" style="color: inherit; text-decoration:none;">Watch</a></span>
+                    <span><a href="/Sounds/Index" style="color: inherit; text-decoration:none;">Sounds</a></span>
+                    <span><a href="/Accessories/Index" style="color: inherit; text-decoration:none;margin-left:-20px">Accessories</a></span>
+                    <li class="nav-item dropdown-dark" style="max-width: 120px; max-height: 75px;">
+                    <a class="nav-link dropdown-toggle-dark" style="max-width: 120px; max-height: 75px;" href="#">Services</a>
+                    <ul class="dropdown-menu-dark">
+                        <li><a href="/Services/authorized_warranty">Bảo Hành Ủy Quyền Apple (ShopDunk Care)</a></li>
+                        <li><a href="/Services/services_packages">Các gói dịch vụ mở rộng</a></li> <!-- Thêm / trước địa chỉ để có thể trỏ tới các các địa trỉ trong cùng mục-->
                     </ul>
+                    </li>
+
                 </div>
             </nav>
-            <header style="">
-                <div class="header2-div" style="margin-left: 180px; z-index: -1;" > @*style="margin-left: 180px;"*@
+
+            <!-- Right header icons -->
+            <header>
+                <div class="header2-div">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <a href="/Home/Cart"><i class="fa-solid fa-bag-shopping"></i></a>
                     <i class="fa-regular fa-user">
@@ -65,6 +56,8 @@
             </header>
             <aside class="above-aside-right"></aside>
         </div>
+
+        <!-- Responsive header -->
         <div class="header-above2">
             <header>
                 <div class="header2-zoomout">
@@ -77,10 +70,12 @@
                 </div>
             </header>
         </div>
+
+        <!-- Secondary menu -->
         <nav class="menu2">
             <div>
                 <a href="Views/Home/Privacy"><span>iPhone</span></a>
-                <span>Ipad</span>
+                <span>iPad</span>
                 <span>Mac</span>
                 <span>Watch</span>
                 <span>Sounds</span>
@@ -88,28 +83,31 @@
             </div>
         </nav>
     </div>
+
+    <!-- Main content -->
     <div class="container">
         <main role="main" class="pb-3">
-            <aside class="aside-left"> </aside>
+            <aside class="aside-left"></aside>
             @RenderBody()
             <aside class="aside-right"></aside>
         </main>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="Register">
-            <h1 style="text-align: center;">Sign Up For Latest New From Shopdunk</h1>
+            <h1 style="text-align: center;">Sign Up For Latest New From UMT</h1>
             <p style="text-align: center;">Latest Product And Sale</p>
             <div class="subscribe" style="align-items: center; max-width: auto;">
-                <span>Subscribe</span>
-                <input type="text" placeholder="Enter your email here... " style="margin-left: 55px;"/>
+                <span >Subscribe</span>
+                <input type="text" placeholder="Enter your email here... " style="margin-left: 60px;"/>
             </div>
         </div>
         <div class="above_footer">
             <aside class="footer_ad_left"></aside>
             <div class="col1 col_out">
-                <a href="#"><img src="https://shopdunk.com/images/thumbs/0012445_Logo_ShopDunk.png" style="width:180px;height:50px" /></a>
-                <p>In 2020, ShopDunk becomes an authorized Apple reseller. We develop standard chain stores and Apple Mono Store to bring the best experience of Apple products and services to Vietnamese users.</p>
+                <a href="#"><img src="~/img/UMT_logo.png" style="width:180px;height:50px" /></a>
+                <p>In 2025, UMT becomes an authorized Apple reseller. We develop standard chain stores and Apple Mono Store to bring the best experience of Apple products and services to Vietnamese users.</p>
                 <div class="td1-div">
                     <a href="https://www.facebook.com/shopdunk.store"><img src="https://shopdunk.com/Themes/SD/Content/images/Face.png" /></a>
                     <a href="https://www.tiktok.com/shopdunk_apple"><img src="https://shopdunk.com/Themes/SD/Content/images/Youtube.png" /></a>
@@ -119,8 +117,8 @@
             <div class="footer-tb">
                 <div class="row1">
                     <div class="col1">
-                        <a href="#"><img src="https://shopdunk.com/images/thumbs/0012445_Logo_ShopDunk.png" style="width:180px;height:50px" /></a>
-                        <p>In 2020, ShopDunk becomes an authorized Apple reseller. We develop standard chain stores and Apple Mono Store to bring the best experience of Apple products and services to Vietnamese users.</p>
+                        <a href="#"><img src="~/img/UMT_logo.png" style="width:180px;height:50px" /></a>
+                        <p>In 2025, UMT becomes an authorized Apple reseller. We develop standard chain stores and Apple Mono Store to bring the best experience of Apple products and services to Vietnamese users.</p>
                         <div class="td1-div">
                             <a href="https://www.facebook.com/shopdunk.store"><img src="https://shopdunk.com/Themes/SD/Content/images/Face.png" /></a>
                             <a href="https://www.tiktok.com/shopdunk_apple"><img src="https://shopdunk.com/Themes/SD/Content/images/Youtube.png" /></a>
@@ -158,24 +156,24 @@
                             <li>Orders</li>
                             <li>Branches</li>
                             <li>Find strore on Google Map</li>
-                            <li>Purchase: <span style="color: rgb(0,101,204)">1900.6626</span></li>
-                            <li>Complaint:<span style="color: rgb(0,101,204)">0886.308.688</span></li>
-                            <li>Exterprise: <span style="color: rgb(0,101,204)">0822.688.688</span></li>
+                            <li>Purchase: <span style="color: rgb(0,101,204)">1900.xxxx</span></li>
+                            <li>Complaint:<span style="color: rgb(0,101,204)">0123.456.789</span></li>
+                            <li>Exterprise: <span style="color: rgb(0,101,204)">0987.654.321</span></li>
                             </ul>
                     </div>
                 </div>
                 <div class="row2">
                     <p>
-                        © 2016 Công ty Cổ Phần HESMAN Việt Nam GPDKKD: 0107465657 do Sở KH & ĐT TP. Hà Nội cấp ngày 08/06/2016.
-                        Địa chỉ: Số 76 Thái Hà, phường Trung Liệt, quận Đống Đa, thành phố Hà Nội, Việt Nam
-                        Đại diện pháp luật: PHẠM MẠNH HÒA | ĐT: 0247.305.9999 | Email: lienhe@shopdunk.com
+                        © 2016 Công ty Cổ Phần UMT GPDKKD: 0102345678 do Sở KH & ĐT TP. HCM cấp ngày 16/07/2025.
+                        Địa chỉ: Số 35-CL, phường Cát Lái, TP. Thủ Đức, thành phố Hồ Chí Minh, Việt Nam
+                        Đại diện pháp luật: NGUYỄN HỮU TÍNH | ĐT: 0123.456.xxxx | Email: lienhe@UMT.com
                     </p>
-                    <a href="http://online.gov.vn/(X(1)S(jfktnnku5rui3vjf5pnk4sgc))/Home/WebDetails/34144?AspxAutoDetectCookieSupport=1"><img style="width:125px; height:50px;" src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" /></a>
+                    <a href="http://online.gov.vn/(X(1)S(jfktnnku5rui3vjf5pnk4sgc))/Home/WebDetails/34144?AspxAutoDetectCookieSupport=1"><img style="width:auto; height:50px;" src="https://shopdunk.com/images/uploaded-source/Trang%20ch%E1%BB%A7/Bocongthuong.png" /></a>
                 </div>
             </div>
             <aside class="footer_ad_right"></aside>
         </div>
     </footer>
+
 </body>
 </html>
-

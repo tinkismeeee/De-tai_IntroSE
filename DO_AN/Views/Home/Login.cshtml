@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@if (ViewBag.saimk == true)
+            {
+                <script>
+                    alert("Tên đăng nhập hoặc mật khẩu không đúng");
+                </script>
+            } 
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
@@ -10,47 +16,57 @@
     
 </head>
 <body>
-    <div class="page"><a>Home Page</a>><a>Login</a></div>
+    @*<div class="page"><a>Home Page</a>><a>Login</a></div>*@
+    <div class="breadcrumb">
+        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" style="list-style-type: none; flex-wrap: nowrap; display: inline-block; white-space: nowrap;">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/" title="Trang chủ" itemprop="item" style="text-decoration: none;">Trang chủ</a>
+                <span class="delimiter">›</span>
+                <span class="delimiter"><a title="Đăng nhập">Đăng nhập</a></span>
+                <meta itemprop="position" content="1"><meta itemprop="name" content="Trang chủ">
+            </li>
+        </ul>
+    </div>
     <div class="main">
         <img style="width:50%;height:500px;" src="https://shopdunk.com/images/uploaded/banner/VNU_M492_08%201.jpeg" />
-        <form method="post">
+        <form method="post" asp-action="Login" onsubmit="return CheckIsvalid()">
             <h1>Đăng nhập</h1>
             <div class="dangnhap">
                 <p>Tên đăng nhập:</p>
-                <input type="text" name="tendangnhap" id="tendangnhap" />
+                <input type="text" name="tendangnhap" id="tendangnhap" placeholder="Tên đăng nhập"/>
                 <script>
-                    const username = document.getElementById("tendangnhap");
-                    username.addEventListener("input", function () {
-                        flag = false;
-                        document.getElementById('error').style.visibility = 'hidden';
-                    });
+                    document.getElementById("tendangnhap").addEventListener("input", function () {
+                        document.getElementById("error").style.visibility = "hidden";
+                    })
                 </script>
             </div>
             <div class="matkhau">
                 <p>Mật khẩu:</p>
-                <input type="text" name="nhapmatkhau" id="nhapmatkhau" />
+                <input type="text" name="nhapmatkhau" id="nhapmatkhau" placeholder="Mật khẩu" />
                 <script>
-                    const password = document.getElementById("nhapmatkhau");
-                    password.addEventListener("input", function () {
-                        flag = false;
-                        document.getElementById('error').style.visibility = 'hidden';
-                    });
+                    document.getElementById("nhapmatkhau").addEventListener("input", function () {
+                        document.getElementById("error").style.visibility = "hidden";
+
+                    })
                 </script>
             </div>
-            <p class="error">Tên đăng nhập hoặc mật khẩu không hợp lệ</p>
+            <p class="error" id="error" name="error">Tên đăng nhập hoặc mật khẩu không đúng</p>
             <div class="nhomatkhau">
                 <input type="checkbox" class="check" /><span style="margin-left: 3px;">Nhớ mật khẩu</span><span style="width: 39%;float:right; color: rgb(0,101,204)">Quên mật khẩu</span>
             </div>
             <br />
-            @*<input type="submit" value="Đăng nhập" class="button_dk" id="button_dk">*@
-            <input onlick="check()" type="submit" value="Đăng nhập" class="button_dk" id="button_dk" />
-            @*<input onclick="return validate()" type="submit" value="Đăng kí" class="button_dk" id="button_dk">*@
+            <input type="submit" value="Đăng nhập" class="button_dk" id="button_dk"/>
+            @*<script>
+                const clear = document.getElementById("button_dk").addEventListener("click", () => {
+                    document.getElementById("tendangnhap").value = document.getElementById("nhapmatkhau").value = "";
+                })
+            </script>*@
             <div class="chuacotk">
-                <span> Bạn Chưa Có Tài Khoản? </span>
+                <span> Bạn Chưa Có Tài Khoản?</span>
                 <a href="/Home/Register">Tạo tài khoản ngay</a>
             </div>
         </form>
     </div>
-    <script src="~/js/LoginJS.js"></script>
+    <script src="~/js/LoginJS.js?v=1"></script>
 </body>
 </html>

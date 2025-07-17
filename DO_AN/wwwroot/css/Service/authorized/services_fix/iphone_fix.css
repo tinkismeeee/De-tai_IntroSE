@@ -1,0 +1,228 @@
+/*airpot_fix*/
+.breadcrumb {
+    background-color: #f6f6f8;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-left: 130px;
+}
+
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #888;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #888;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb li a:hover {
+    color: #333;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "/";
+    margin: 0 8px;
+    color: #ccc;
+}
+
+.breadcrumb li:last-child a {
+    color: #555;
+    font-weight: normal;
+    cursor: default;
+}
+
+/*airpot_fix*/
+
+body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3faff;
+        }
+
+        .top-header {
+            background-color: #1d1d1f;
+            color: #f6f6f8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 50px;
+        }
+
+        .top-header .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-header .menu li {
+            margin: 0 15px;
+        }
+
+        .top-header .menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .banner {
+            background: linear-gradient(to bottom, #FFFFFF, #A6C8FF);
+            padding: 60px 20px;
+        }
+
+        .bannerbutton {
+            background-color: #f6f6f8;
+            padding: 30px 20px;
+        }
+
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        .banner-image img {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+        }
+
+        .banner-text {
+            max-width: 500px;
+        }
+
+        .banner-text h2 {
+            font-size: 32px;
+            color: #0066d9;
+            line-height: 1.5;
+            margin: 0 0 0;
+            width: 600px;
+        }
+
+        .banner-text p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .banner-text a {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            padding: 20px 50px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .banner-text-button a {
+            display: inline-block;
+            background: #007aff;
+            color: white;
+            padding: 20px 150px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            font-size: 22px;
+            margin-bottom: 60px;
+        }
+
+        .banner-text a:hover {
+            background: #005fcc;
+        }
+
+        .lang-flag img {
+            height: 24px;
+        }
+
+.service-section {
+    padding: 0px 0;
+    background-color: #f6f6f8;
+    text-align: center;
+}
+
+.service-header h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: -2px;
+}
+
+.service-header p {
+    font-size: 18px;
+    color: #555;
+}
+
+.tab-container {
+    width: 100%;
+}
+
+.tab-menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100px; /* Chiều cao của thanh menu, có thể điều chỉnh theo nhu cầu */
+}
+
+.tab-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tab-menu li.active {
+    background-color: #007bff;
+    color: #f6f6f8;
+    border-radius: 20px;
+}
+
+.tab-content {
+    margin-top: 20px;
+    position: relative;
+    max-width: 100%;
+    overflow-y: auto; /* Hiển thị thanh cuộn khi cần */
+    height: 700px; /* Giảm chiều cao của khu vực cuộn ảnh */
+}
+
+.tab-pane {
+    display: none;
+    text-align: center;
+}
+
+.tab-pane.active {
+    display: block;
+    color: #dc2727;
+}
+
+.image-tab {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

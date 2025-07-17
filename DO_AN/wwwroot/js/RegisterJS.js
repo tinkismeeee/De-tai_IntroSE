@@ -33,38 +33,6 @@ function validate() {
         flag = false;
         showError('repassword', 'Vui lòng kiểm tra nhập lại Password');
     }
-    console.log(flag);
-    if (flag) {
-        var magioithieu1 = document.getElementById("magioithieu1");
-        var name = document.getElementById("name");
-        var email = document.getElementById("email");
-        var phone = document.getElementById("phone");
-        var username = document.getElementById("username");
-        var password = document.getElementById("password");
-        var repassword = document.getElementById("repassword");
-        var male_checkbox = document.getElementById("male_checkbox");
-        var female_checkbox = document.getElementById("female_checkbox");
-        var day = document.getElementById("day");
-        var month = document.getElementById("month");
-        var year = document.getElementById("year");
-        console.log(magioithieu1.value + " " + name.value + " " + email.value + " " + phone.value + " " + username.value + " " + password.value + " " + repassword.value + " " + male_checkbox.value + " " + female_checkbox.value + " " + day.value + " " + month.value + " " + year.value + "\n");
-        magioithieu1.value = name.value = email.value = phone.value = username.value = password.value = repassword.value = "";
-        day.value = month.value = year.value = 0;
-        male_checkbox.checked = female_checkbox.checked = false;
-        
-        
-        document.getElementById("noti").innerHTML = "Đang chuyển hướng trong 3 giây";
-        setTimeout(function () {
-            document.getElementById("noti").innerHTML = "Đang chuyển hướng trong 2 giây";
-        }, 1000);
-        setTimeout(function () {
-            document.getElementById("noti").innerHTML = "Đang chuyển hướng trong 1 giây";
-        }, 2000);
-        setTimeout(function () {
-            // window.location.href = "https://localhost:7077/Home/Login";
-            document.getElementById("noti").innerHTML = "";
-        }, 3000);
-        
-    }
+    console.log(flag + "\n");
     return flag;
 }

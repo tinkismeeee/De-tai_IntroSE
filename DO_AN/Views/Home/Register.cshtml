@@ -1,4 +1,64 @@
-﻿<!DOCTYPE html>
+﻿@if (ViewBag.username_exist == true)
+{
+    <script>
+        alert("Username đã tồn tại!");
+        var magioithieu1 = document.getElementById("magioithieu1");
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("phone");
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var repassword = document.getElementById("repassword");
+        var day = document.getElementById("day");
+        var month = document.getElementById("month");
+        var gender = document.getElementById("gender");
+        var year = document.getElementById("year");
+        console.log(magioithieu1.value + " " + name.value + " " + email.value + " " + phone.value + " " + username.value + " " + password.value + " " + repassword.value + " " + male_checkbox.value + " " + female_checkbox.value + " " + day.value + " " + month.value + " " + year.value + "\n");
+        magioithieu1.value = name.value = email.value = phone.value = username.value = password.value = repassword.value = "";
+        day.value = month.value = year.value = gender.value = 0;
+    </script>
+}
+@if (ViewBag.gender_err == true)
+{
+    <script>
+        alert("Dữ liệu đầu vào không xác định!");
+        var magioithieu1 = document.getElementById("magioithieu1");
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("phone");
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var repassword = document.getElementById("repassword");
+        var day = document.getElementById("day");
+        var month = document.getElementById("month");
+        var year = document.getElementById("year");
+        var gender = document.getElementById("gender");
+        console.log(magioithieu1.value + " " + name.value + " " + email.value + " " + phone.value + " " + username.value + " " + password.value + " " + repassword.value + " " + male_checkbox.value + " " + female_checkbox.value + " " + day.value + " " + month.value + " " + year.value + "\n");
+        magioithieu1.value = name.value = email.value = phone.value = username.value = password.value = repassword.value = "";
+        day.value = month.value = year.value = gender.value = 0;
+    </script>
+}
+
+@if (TempData["message1"] != null)
+{
+    <script>
+        var magioithieu1 = document.getElementById("magioithieu1");
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("phone");
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var repassword = document.getElementById("repassword");
+        var day = document.getElementById("day");
+        var month = document.getElementById("month");
+        var year = document.getElementById("year");
+        var gender = document.getElementById("gender");
+        console.log(magioithieu1.value + " " + name.value + " " + email.value + " " + phone.value + " " + username.value + " " + password.value + " " + repassword.value + " " + day.value + " " + month.value + " " + year.value + "\n");
+        magioithieu1.value = name.value = email.value = phone.value = username.value = password.value = repassword.value = "";
+        day.value = month.value = year.value = gender.value = 0;
+    </script>
+}
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="utf-8" />
@@ -9,22 +69,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="page"><a>Home Page</a>><a>Register</a></div>
+    @*<div class="page"><a>Home Page</a>><a>Register</a></div>*@
+    <div class="breadcrumb">
+        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" style="list-style-type: none; flex-wrap: nowrap; display: inline-block; white-space: nowrap;">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="/" title="Trang chủ" itemprop="item" style="text-decoration: none;">Trang chủ</a>
+                <span class="delimiter">›</span>
+                <span class="delimiter"><a title="Đăng ký">Đăng ký</a></span>
+                <meta itemprop="position" content="1"><meta itemprop="name" content="Trang chủ">
+            </li>
+        </ul>
+    </div>
     <div class="main">
         <img style="width: 50%;height: 500px;" src="https://shopdunk.com/images/uploaded/banner/TND_M402_010%201.jpeg" />
-        <form class="right" method="post">
+        <form class="right" method="post" asp-action="Register" onsubmit="return validate()">
             <div class="dk">
                 <h1>Đăng ký</h1>
-                <p>Mã giới thiệu (không bắt buộc):</p>
-                <input type="text" name="magioithieu1" id="magioithieu1" />
+                <p>Mã giới thiệu (Nếu có):</p>
+                <input type="text" name="magioithieu1" id="magioithieu1" placeholder="Mã giới thiệu"/>
             </div>
             <div>
                 <p>Họ và tên:</p>
-                <input type="text" name="hoten1" class="name" id="name" />
+                <input type="text" name="name" class="name" id="name" placeholder="Họ và tên" />
             </div>
             <div>
                 <br />
-                <span>Giới tính:</span><span class="famale"><input type="radio" name="gender" id="male_checkbox"/>Nam</span><span class="male"><input type="radio" name="gender" id="female_checkbox"/>Nữ</span>
+                @*<span>Giới tính:</span><span class="famale"><input type="radio" name="gender" id="male_checkbox" />Nam</span><span class="male"><input type="radio" name="gender" id="female_checkbox" />Nữ</span>*@
+                <select class="date" name="gender" id="gender">
+                    <option value="0">Giới tính</option>
+                    <option value="1">Male (Nam)</option>
+                    <option value="2">Female (Nữ)</option>
+                    <option value="3">Agender</option>
+                    <option value="4">Abimegender</option>
+                    <option value="5">Adamas gender</option>
+                    <option value="6">Aerogender</option>
+                    <option value="7">Aesthetigender</option>
+                    <option value="8">Affectugender</option>
+                    <option value="9">Agenderflux</option>
+                    <option value="10">Alexigender</option>
+                    <option value="11">Aliusgender</option>
+                    <option value="12">Amaregender</option>
+                    <option value="13">Ambigender</option>
+                    <option value="14">Ambonec</option>
+                    <option value="15">Amicagender</option>
+                    <option value="16">Androgyne</option>
+                    <option value="17">Anesigender</option>
+                    <option value="18">Angenital</option>
+                    <option value="19">Anogender</option>
+                    <option value="20">Anongender</option>
+                    <option value="21">Antegender</option>
+                    <option value="22">Anxiegender</option>
+                    <option value="23">Apagender</option>
+                    <option value="24">Apconsugender</option>
+                    <option value="25">Astergender</option>
+                    <option value="26">Astral gender</option>
+                    <option value="27">Autigender</option>
+                    <option value="28">Autogender</option>
+                    <option value="29">Axigender</option>
+                    <option value="30">Bigender</option>
+                    <option value="31">Biogender</option>
+                    <option value="32">Blurgender</option>
+                    <option value="33">Boyflux</option>
+                    <option value="34">Burstgender</option>
+                    <option value="35">Caelgender</option>
+                    <option value="36">Cassgender</option>
+                    <option value="37">Cassflux</option>
+                    <option value="38">Cavusgender</option>
+                    <option value="39">Cendgender</option>
+                    <option value="40">Ceterogender</option>
+                    <option value="41">Ceterofluid</option>
+                    <option value="42">Cisgender</option>
+                    <option value="43">Cloudgender</option>
+                    <option value="44">Collgender</option>
+                    <option value="45">Colorgender</option>
+                    <option value="46">Commogender</option>
+                    <option value="47">Condigender</option>
+                    <option value="48">Deliciagender</option>
+                    <option value="49">Demifluid</option>
+                    <option value="50">Demiflux</option>
+                    <option value="51">Demigender</option>
+                    <option value="52">Domgender</option>
+                    <option value="53">Duragender</option>
+                    <option value="54">Egogender</option>
+                    <option value="55">Epicene</option>
+                    <option value="56">Esspigender</option>
+                    <option value="57">Exgender</option>
+                    <option value="58">Existigender</option>
+                    <option value="59">Femfluid</option>
+                    <option value="60">Femgender</option>
+                    <option value="61">Fluidflux</option>
+                    <option value="62">Gemigender</option>
+                    <option value="63">Genderblank</option>
+                    <option value="64">Genderflow</option>
+                    <option value="65">Genderfluid</option>
+                    <option value="66">Genderfuzz</option>
+                    <option value="67">Genderflux</option>
+                    <option value="68">Genderpuck</option>
+                    <option value="69">Genderqueer</option>
+                    <option value="70">Gender witched</option>
+                    <option value="71">Girlflux</option>
+                    <option value="72">Healgender</option>
+                    <option value="73">Mirrorgender</option>
+                    <option value="74">Omnigender</option>
+                </select>
             </div>
             <div>
                 <br />
@@ -34,35 +181,35 @@
             </div>
             <div>
                 <p class="email1">Email:</p>
-                <input type="email" id="email" />
+                <input type="email" id="email" name="email" placeholder="Email" />
             </div>
             <div>
                 <p>Điện thoại:</p>
-                <input type="text" name="phone" id="phone" />
+                <input type="text" name="phone" id="phone" placeholder="Số điện thoại" />
                 <p class="error" id="phone_error"></p>
             </div>
             <div>
                 <p>Tên đăng nhập:</p>
-                <input type="text" id="username" />
+                <input type="text" id="username" name="username" placeholder="Tên đăng nhập"/>
                 <p class="error" id="username_error"></p>
             </div>
             <div>
                 <p>Mật khẩu:</p>
-                <input type="password" name="password" id="password" />
+                <input type="password" name="password" id="password" placeholder="Mật khẩu" />
                 <p class="error" id="password_error"></p>
             </div>
             <p class="note">Lưu ý: Mật khẩu phải có tối thiểu 8 ký tự bao gồm chữ, số và các ký tự đặc biệt</p>
             <div>
                 <p>Xác nhận mật khẩu:</p>
-                <input type="password" name="repassword" id="repassword" />
+                <input type="password" name="repassword" id="repassword" placeholder="Nhập lại mật khẩu" />
                 <p class="error" id="repassword_error"></p>
             </div>
             <span id="noti"></span>
             <br />
             <br />
-            <input onclick="return validate()" class="button_dk" value="Đăng kí" id="button_dk">
+            <input class="button_dk" value="Đăng kí" id="button_dk" type="submit">
         </form>
     </div>
-    <script src="~/js/RegisterJS.js?v=2" type="module"></script>
+    <script src="~/js/RegisterJS.js?v=3"></script>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/PayProduct.css">
+    <title>Chi tiết đơn hàng</title>
+</head>
+<body>
+    <div class="breadcrumb">
+        <ul itemscope="" itemtype="http://schema.org/BreadcrumbList" style="list-style-type: none; flex-wrap: nowrap; display: inline-block; white-space: nowrap;">
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Trang chủ" itemprop="item" style="text-decoration: none;">Trang chủ</a> 
+                <span class="delimiter">›</span>
+                <span class="delimiter"><a title="Chi tiết đơn hàng" style="text-decoration: none;" href="/Home/PayProduct">Chi tiết đơn hàng</a></span>
+                <span class="delimiter">›</span>
+                <span class="delimiter"><a title="Thông tin thanh toán" style="text-decoration: none;" href="#">Thông tin thanh toán</a></span>
+                <meta itemprop="position" content="1"><meta itemprop="name" content="Trang chủ">
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="board">
+            <h1>Thông tin thanh toán</h1>
+            <br/>
+            <p>Chủ tài khoản: <span style="float: right; padding-right: 5px;">Nguyễn Hữu Tính</span></p>
+            <br />
+            <p>Ngân hàng:<span style="float: right; padding-right: 5px;">Agribank</span></p>
+            <br />
+            <p>Số tài khoản:<span style="color:#ca0000;float: right; padding-right: 5px;">4815205123757</span></p>
+            <br />
+            <p>Chi nhánh:<span style="float: right; padding-right: 5px;">Chi nhánh H.Phú Quý - Bình Thuận</span></p>
+            <br/>
+            <p style="font-weight: 900;">Số tiền phải thanh toán:<span style="color:#ca0000;float: right; padding-right: 5px;font-weight: 900;">73.260.000</span></p>
+            <br />
+            <img src="~/img/QRcode_Pay.jpg" alt="" style="max-width: 560px;">
+        </div>
+    </div>
+</body>
+</html>
